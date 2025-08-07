@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: comment_analyzer
+      POSTGRES_USER: comment_analyzer
+      POSTGRES_DB: comment_analyzer_development
+    ports:
+      - "5432:5432"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/app
+      - bundle_cache:/usr/local/bundle
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgres://comment_analyzer:comment_analyzer@db:5432/comment_analyzer_development
+      RAILS_ENV: development
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
+  bundle_cache:
