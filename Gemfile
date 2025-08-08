@@ -43,10 +43,15 @@ group :development, :test do
   gem "brakeman", require: false
 
   # Rspec for Rails testing [https://github.com/rspec/rspec-rails]
-  gem "rspec-rails", "~> 8.0", group: :test
-  
+  gem "rspec-rails", "~> 8.0"
+
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem "factory_bot_rails", "~> 6.5", group: :test
+  gem "factory_bot_rails", "~> 6.5"
+end
+
+group :test do
+  gem "vcr", "~> 6.3"
+  gem "webmock", "~> 3.25"
 end
