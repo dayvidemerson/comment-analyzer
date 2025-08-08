@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  resources :keywords
   resources :comments
   resources :posts
   resources :users
+
+  namespace :importer do
+    resources :users, only: %i[index show create]
+    resources :posts, only: [:index]
+    resources :comments, only: [:index]
+  end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_08_115656) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_08_180431) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -29,7 +29,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_08_115656) do
     t.string "name"
     t.string "email"
     t.text "body"
+    t.string "translated_name"
     t.text "translated_body"
+    t.integer "rating"
     t.bigint "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -49,6 +51,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_08_115656) do
     t.string "type"
     t.integer "state"
     t.string "key"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "keywords", force: :cascade do |t|
+    t.string "word"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
