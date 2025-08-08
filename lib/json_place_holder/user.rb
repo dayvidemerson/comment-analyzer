@@ -2,7 +2,7 @@ module JsonPlaceHolder
   class User < Base
     class << self
       def all
-        get('/users')
+        get("/users")
       end
 
       def find(id)
@@ -13,7 +13,7 @@ module JsonPlaceHolder
       end
 
       def where(username:)
-        get('/users?username=' + username)
+        get("/users?username=" + username)
       end
     end
   end

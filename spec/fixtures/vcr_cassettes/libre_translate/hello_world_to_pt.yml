@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://translate:5000/translate
+    body:
+      encoding: UTF-8
+      string: '{"q":"Hello World","source":"en","target":"pt"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - translate:5000
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type
+      Access-Control-Allow-Methods:
+      - GET, POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Authorization
+      Access-Control-Max-Age:
+      - '1728000'
+      Content-Length:
+      - '33'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 08 Aug 2025 17:07:59 GMT
+      Server:
+      - waitress
+      Set-Cookie:
+      - session=94e2a3a9-4691-48e5-bd6b-c09d4d10c02a; Expires=Mon, 08 Sep 2025 17:08:01
+        GMT; HttpOnly; Path=/
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0cmFuc2xhdGVkVGV4dCI6Ik9sw6EsIE11bmRvIn0K
+  recorded_at: Fri, 08 Aug 2025 17:08:01 GMT
+recorded_with: VCR 6.3.1

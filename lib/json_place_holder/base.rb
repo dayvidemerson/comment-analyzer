@@ -1,11 +1,11 @@
-require 'net/http'
-require 'json'
+require "net/http"
+require "json"
 
 module JsonPlaceHolder
   class Error < StandardError; end
 
   class Base
-    BASE_URL = 'https://jsonplaceholder.typicode.com'.freeze
+    BASE_URL = "https://jsonplaceholder.typicode.com".freeze
 
     class << self
       protected
@@ -13,10 +13,10 @@ module JsonPlaceHolder
       def get(path)
         uri = URI(BASE_URL + path)
         response = Net::HTTP.get_response(uri)
-        
+
         handle_response(response)
       end
-  
+
       def handle_response(response)
         case response
         when Net::HTTPSuccess

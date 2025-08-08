@@ -1,4 +1,12 @@
 services:
+  translate:
+    image: libretranslate/libretranslate
+    restart: unless-stopped
+    environment:
+      LT_LOAD_ONLY: en,pt,es
+    ports:
+      - "5000:5000"
+
   db:
     image: postgres:latest
     restart: always
@@ -22,10 +30,10 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DATABASE_URL: postgres://comment_analyzer:comment_analyzer@db:5432/comment_analyzer_development
       RAILS_ENV: development
     depends_on:
       - db
+      - translate
 
 volumes:
   postgres_data:

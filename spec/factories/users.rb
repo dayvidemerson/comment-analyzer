@@ -5,7 +5,7 @@ FactoryBot.define do
     email { "MyString" }
     phone { "MyString" }
     website { "MyString" }
-    address { nil }
-    company { nil }
+    address
+    company
   end
 end
