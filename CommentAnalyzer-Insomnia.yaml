@@ -1,0 +1,453 @@
+type: collection.insomnia.rest/5.0
+name: Comment Analyzer
+meta:
+  id: wrk_f89bff91c81f4c08b5534191f6d70f71
+  created: 1754670218657
+  modified: 1754677915940
+  description: ""
+collection:
+  - name: Importações
+    meta:
+      id: fld_2f6660eed637413d9a761aec7efd63b2
+      created: 1754675169378
+      modified: 1754675770257
+      sortKey: -1754675204146
+      description: ""
+    children:
+      - url: http://localhost:3000/importer/users
+        name: Importar Usuário
+        meta:
+          id: req_e5a78923c4fa49e6900bd09cb727f6cb
+          created: 1754674516048
+          modified: 1754675684975
+          isPrivate: false
+          description: ""
+          sortKey: -1754675176390
+        method: POST
+        parameters:
+          - id: pair_0b200fa5b9894a9ea6c36075050aa332
+            name: username
+            value: Antonette
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/importer/users/34
+        name: Acompanhar Importação do Usuário
+        meta:
+          id: req_d0d4bc2eccbd4eff87af217d01c33b25
+          created: 1754674896169
+          modified: 1754675177912
+          isPrivate: false
+          description: ""
+          sortKey: -1754675176290
+        method: GET
+        parameters:
+          - id: pair_0b200fa5b9894a9ea6c36075050aa332
+            name: username
+            value: Antonette
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/importer/posts
+        name: Acompanhar Importação das Postagens
+        meta:
+          id: req_820130f5f2524a5299f597df5d9909a2
+          created: 1754674939454
+          modified: 1754675179322
+          isPrivate: false
+          description: ""
+          sortKey: -1754675176240
+        method: GET
+        parameters:
+          - id: pair_0b200fa5b9894a9ea6c36075050aa332
+            name: username
+            value: Antonette
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/importer/comments
+        name: Acompanhar Importação dos Comentários
+        meta:
+          id: req_eb27e0dae66c462abb7efeeac09e5e4c
+          created: 1754674949727
+          modified: 1754675180621
+          isPrivate: false
+          description: ""
+          sortKey: -1754675176215
+        method: GET
+        parameters:
+          - id: pair_0b200fa5b9894a9ea6c36075050aa332
+            name: username
+            value: Antonette
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuários
+    meta:
+      id: fld_b8b36aa12443491b8e1897e2cf02bf6c
+      created: 1754675193595
+      modified: 1754675767990
+      sortKey: -1754675204046
+      description: ""
+    children:
+      - url: http://localhost:3000/users
+        name: Listagem
+        meta:
+          id: req_fea5cadf82114857a32b7f58f88acf9f
+          created: 1754675210175
+          modified: 1754675239452
+          isPrivate: false
+          description: ""
+          sortKey: -1754675210175
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Postagens
+    meta:
+      id: fld_fe5eaf0e4e464fa1add9b29ad707e881
+      created: 1754675198616
+      modified: 1754675198616
+      sortKey: -1754675198616
+      description: ""
+    children:
+      - url: http://localhost:3000/posts
+        name: Listagem
+        meta:
+          id: req_b57ce806b0ca4631bd3178358af5974e
+          created: 1754675247142
+          modified: 1754675256462
+          isPrivate: false
+          description: ""
+          sortKey: -1754675253444
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Palavras-Chave
+    meta:
+      id: fld_21752edd1e9c45d18722814d951b8d0f
+      created: 1754675203946
+      modified: 1754675772052
+      sortKey: -1754675204096
+      description: ""
+    children:
+      - url: http://localhost:3000/keywords
+        name: Listagem
+        meta:
+          id: req_0ce4a16a1b254ba2bffaf841acf4ff1a
+          created: 1754675273009
+          modified: 1754675777839
+          isPrivate: false
+          description: ""
+          sortKey: -1754675276191
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/keywords
+        name: Criar
+        meta:
+          id: req_43815253a5ef4085a77ab2a9d6c3a22a
+          created: 1754675316172
+          modified: 1754677080806
+          isPrivate: false
+          description: ""
+          sortKey: -1754675264817.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"word": "escritor"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/keywords/1
+        name: Exibir
+        meta:
+          id: req_70d8854b8f2f40ba9179ccac81ef2366
+          created: 1754675493688
+          modified: 1754675782010
+          isPrivate: false
+          description: ""
+          sortKey: -1754675270504.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/keywords/1
+        name: Editar
+        meta:
+          id: req_ae4d3c347e294a8185717cb41f98f5ba
+          created: 1754675819136
+          modified: 1754675830381
+          isPrivate: false
+          description: ""
+          sortKey: -1754675259130.75
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"word": "excelent"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/keywords/2
+        name: Excluir
+        meta:
+          id: req_435a744c8e2140bc9b772af26f112d5a
+          created: 1754675849761
+          modified: 1754676856892
+          isPrivate: false
+          description: ""
+          sortKey: -1754675256287.375
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Comentários
+    meta:
+      id: fld_6237f237416d4ca9a9ba016f7422a7a2
+      created: 1754675758302
+      modified: 1754675758302
+      sortKey: -1754675201281
+      description: ""
+    children:
+      - url: http://localhost:3000/comments
+        name: Listagem
+        meta:
+          id: req_13a806520d294c80b7a5fc84e9c795a5
+          created: 1754675758303
+          modified: 1754675758303
+          isPrivate: false
+          description: ""
+          sortKey: -1754675276191
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/comments
+        name: Criar
+        meta:
+          id: req_0677675828ab4a3c90225266acbec428
+          created: 1754675758304
+          modified: 1754675758304
+          isPrivate: false
+          description: ""
+          sortKey: -1754675264817.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Excelent!",
+            	"email": "test@test.com",
+            	"body": "Excelent post, I love it. You're a great writer.",
+            	"post_id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/comments/104
+        name: Exibir
+        meta:
+          id: req_ca3a8fd25ed44a249ee3a86aeb413986
+          created: 1754675758305
+          modified: 1754675758305
+          isPrivate: false
+          description: ""
+          sortKey: -1754675270504.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - url: http://localhost:5000/translate
+    name: Traduzir no Libretranslate
+    meta:
+      id: req_8f67d08b481e4435aefa9451a9450974
+      created: 1754670230660
+      modified: 1754674513299
+      isPrivate: false
+      description: ""
+      sortKey: -1754670230660
+    method: POST
+    parameters:
+      - id: pair_e5d73322d9a4441ba28346f0599e6c1f
+        name: q
+        value: Hello World
+        description: ""
+        disabled: false
+      - id: pair_9e7a604edb19439aa50772d679f7762c
+        name: source
+        value: en
+        description: ""
+        disabled: false
+      - id: pair_364c97eee4c5486a88bd2aafc4841bef
+        name: target
+        value: pt
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_9ad4fef73ebc701adcf0140d1ef6e2b92a3dd573
+    created: 1754670218665
+    modified: 1754674497513
+  cookies:
+    - key: session
+      value: c6a6fb0c-5ef1-4019-8c27-3593d5b25673
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-08-08T17:34:45.471Z
+      lastAccessed: 2025-08-08T17:34:57.513Z
+      id: d35203e5-1872-4d0b-b651-7c8ed19e5d58
+environments:
+  name: Base Environment
+  meta:
+    id: env_9ad4fef73ebc701adcf0140d1ef6e2b92a3dd573
+    created: 1754670218662
+    modified: 1754670218662
+    isPrivate: false

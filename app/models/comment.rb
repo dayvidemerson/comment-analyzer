@@ -14,18 +14,18 @@ class Comment < ApplicationRecord
     words = (translated_name.downcase.split + translated_body.downcase.split).uniq
 
     words = words.map do |word|
-      I18n.transliterate(word.gsub(/[^a-zA-Z0-9]/, ''))
+      I18n.transliterate(word.gsub(/[^a-zA-Z0-9]/, ""))
     end
 
-    update!(rating: Keyword.where('word in (?)', words).size)
+    update!(rating: Keyword.where("word in (?)", words).size)
   end
 
   def status
-    return 'pending' unless rating
+    return "pending" unless rating
 
-    return 'rejected' if rating < 2
-    
-    'approved'
+    return "rejected" if rating < 2
+
+    "approved"
   end
 
   private
